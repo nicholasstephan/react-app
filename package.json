@@ -1,0 +1,31 @@
+{
+  "name": "App",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha ./**/*_test.js",
+    "test-watch": "",
+    "build": "browserify -t [coffee-reactify --extension='.cjsx'] -t lessify app/main.cjsx -o www/index.js",
+    "build-watch": "watchify -t [coffee-reactify --extension='.cjsx'] -t lessify app/main.cjsx -o www/index.js --debug --verbose",
+    "serve": "cd www && live-server"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "jquery": "^2.1.1",
+    "moment": "^2.7.0",
+    "envify": "^1.2.1",
+    "react": "^0.10.0",
+    "scroller": "git+https://github.com/nicholasstephan/scroller.git",
+    "oauthio": "git+https://github.com/oauth-io/oauth-js",
+    "fastclick": "^1.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "watchify": "^0.10.2",
+    "lessify": "^0.4.1",
+    "live-server": "^0.5.0",
+    "coffee-reactify": "^0.1.3",
+    "mocha": "^1.20.1",
+    "should": "^4.0.4"
+  }
+}

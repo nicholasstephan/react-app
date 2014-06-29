@@ -1,0 +1,49 @@
+@import "variables.less";
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html, body {
+  min-height: 0px !important; 
+  overflow:hidden;
+}
+
+body {
+  -webkit-touch-callout: none;         /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;      /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;           /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-overflow-scrolling: touch;   /* scroll with momentum. */
+
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow:hidden;
+
+  font-family:Helvetica, Arial, sans-serif;
+  font-weight:300;
+  font-size:12px;
+}
+
+:focus {
+  outline: none; /* remove that horrible outline when something is focused */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding:0;
+  margin:0;
+  line-height:1.2em;
+}
+
+p {
+  -webkit-user-select: text; /* allow text selection for paragraph elements only */ 
+}
+
+a {
+  text-decoration:none;
+}
+
+strong {
+  font-weight:600;
+}

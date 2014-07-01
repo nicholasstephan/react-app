@@ -10,7 +10,33 @@ describe('App', function(){
 
   describe('environment', function() {
 
-    it('should handle fastclick touches');
+    // var component = React.createClass({
+    //     handleClick: function() {
+    //     },
+    //     handleMouseDown: function() {
+    //     },
+    //     render: function() {
+    //       return App({}, [
+    //         React.DOM.div({
+    //           onClick:this.handleClick,
+    //           onMouseDown:this.handleMouseDown,
+    //           ref: "button"
+    //         })
+    //       ]);
+    //     }
+    //   });
+
+    // beforeEach(function() {
+    //   React.renderComponent(component(), document.body);
+    // });
+
+    // afterEach(function() {
+    //   React.unmountAndReleaseReactRootNode(document.body);
+    // });
+
+    it('should handle fastclick touches', function() {
+      
+    });
 
     it('should not overflow container');
 

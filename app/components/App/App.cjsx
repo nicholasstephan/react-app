@@ -2,6 +2,7 @@ React = require 'react'
 
 # Pull in touch events. See
 # https://github.com/petehunt/react-touch-lib/blob/master/src/ReactTouch.js
+
 # EventPluginHub = require 'react/lib/EventPluginHub'
 # ResponderEventPlugin = require './environment/ResponderEventPlugin'
 # TapEventPlugin = require './environment/TapEventPlugin'
@@ -15,7 +16,6 @@ attachFastClick document.body
 
 
 React.initializeTouchEvents true
-
 
 # Fill the screen
 STYLE = {
@@ -36,6 +36,8 @@ module.exports = React.createClass
     e.preventDefault()
 
   render: ->
-    <div className="App" onMouseMove={this.handleMouseMove} style={STYLE}>
-      {this.props.children}
-    </div>
+    @transferPropsTo(
+      <div className="App" onMouseMove={@handleMouseMove} style={STYLE}>
+        {@props.children}
+      </div>
+    )

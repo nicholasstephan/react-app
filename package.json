@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha ./**/*_test.js",
+    "test": "mochify ./**/*_test.js",
     "test-watch": "",
-    "build": "browserify -t [coffee-reactify --extension='.cjsx'] -t lessify app/main.cjsx -o www/index.js",
-    "build-watch": "watchify -t [coffee-reactify --extension='.cjsx'] -t lessify app/main.cjsx -o www/index.js --debug --verbose",
+    "build": "browserify app/main.cjsx -o www/index.js",
+    "build-watch": "watchify app/main.cjsx -o www/index.js --debug --verbose",
     "serve": "cd www && live-server"
   },
   "dependencies": {
@@ -26,6 +26,14 @@
     "live-server": "^0.5.0",
     "coffee-reactify": "^0.1.3",
     "mocha": "^1.20.1",
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "mochify": "^0.9.4",
+    "phantomjs": "^1.9.7-12"
+  },
+  "browserify": {
+    "transform": [
+      "coffee-reactify",
+      "lessify"
+    ]
   }
 }

@@ -23,11 +23,11 @@ module.exports = React.createClass({
     return e.preventDefault();
   },
   render: function() {
-    return React.DOM.div({
+    return this.transferPropsTo(React.DOM.div({
       "className": "App",
       "onMouseMove": this.handleMouseMove,
       "style": STYLE
-    }, this.props.children);
+    }, this.props.children));
   }
 });
 
@@ -41,8 +41,6 @@ require('./main.less');
 React = require('react');
 
 App = require('./components/App/App.cjsx');
-
-console.log(App);
 
 React.renderComponent(App(), document.body);
 

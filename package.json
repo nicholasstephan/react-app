@@ -17,6 +17,7 @@
     "react": "^0.10.0",
     "scroller": "git+https://github.com/nicholasstephan/scroller.git",
     "oauthio": "git+https://github.com/oauth-io/oauth-js",
+    "radio": "git+https://github.com/nicholasstephan/Radio.git",
     "fastclick": "^1.0.2"
   },
   "devDependencies": {
